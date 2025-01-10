@@ -1,5 +1,3 @@
-#Marianne Carreon
-#1/6/25
 #Rock Paper Scissors
 #init
 
@@ -10,8 +8,8 @@ losses=0
 ties=0
 
 #functions
-def rpsgame():
-    global wins
+def rpsgame():        # This functions plays a game of rock,paper,scissors with any players that uses it and you can play as many times as you want until you decide to end the game.
+    global wins        #global variables saves the value of the variable as it changes.
     global losses
     global ties
     print("Welcome to Rock Paper Scissors!")
@@ -19,7 +17,7 @@ def rpsgame():
     while True:
         print("Select rock, paper,scissors, or end")
         player = input("Selection: ")
-        computer = random.randint(1,3)
+        computer = random.randint(1,3)        # chooses a random number which later determines what the computer choose
         if computer == 1:
             computer = "rock"
             print("Computer choose rock")
