@@ -1,6 +1,4 @@
-#Marianne Carreon
-#4th period
-#10/17/24
+#Name Generator
 
 #Main
 def name_generator():   #This function generates a name based on the selections the player chooses to do.
