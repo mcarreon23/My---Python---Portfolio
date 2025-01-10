@@ -1,6 +1,4 @@
-#Marianne Carreon
-#4th Period
-#11/19/24
+#Simple Calculator
 
 #Init
 #Function
