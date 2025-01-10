@@ -1,6 +1,4 @@
-#Marianne Carreon
-#4th period
-#12/10/24
+#Madlibs
 #Init
 import random      
 #Functions
