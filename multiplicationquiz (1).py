@@ -5,7 +5,7 @@
 import random
 
 #Functions
-def test():
+def test():        #this functions is a multiplication test and the player can decide what level they want to play in which decided how big the numbers will be.
     global correct
     print("Welcome to Multiplication Facts! Enter the answer to the following problems! ")
     level = input("What level would you like to do? hard (h) , meduium (m) , or  easy (e)") #asks the user to choose a level
