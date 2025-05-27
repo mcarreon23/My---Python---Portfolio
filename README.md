@@ -9,12 +9,12 @@ rock, paper, or scissors I have added a randomizer that chooses a number 1-3, an
 can be played for as many times as the player wants, and if they no longer wish to play, they can end the game.
 
 - Something cool about this piece of code is that it only ends when the player wants to end but also that it keeps score as the
-the game keeps on going.
+game keeps on going.
 
 
 Multiplication Quiz
 
-This project quizzes anyone that plays it, and the player chooses the level they wish to play in the beginning, which depends on 
+This project quizzes anyone that plays it, and the player chooses the level they wish to play in the beginning, which depending on 
 What they choose, the numbers will vary. This project uses a random function so that the numbers that are displayed are different.
 randomized. The multiplication facts will be displayed, and the player will enter their input, and if the answer they entered is wrong, then
 it will display incorrect but if it is true it will display correct. At the end the player will know their final score out of the 5 questions that were asked.
@@ -61,22 +61,22 @@ customizable and is meant to accommodate several different users.
 Slot Machine
 
 This program is designed to gamble and there are different odds that bring up the value a person can win depending on what they got is how much money they can win. There are
-different odds of getting matching symbols especially getting all 7's and winning the jackpot.
+different odds of getting matching symbols, especially getting all 7's and winning the jackpot.
 
 - This program is unique because since I used random choices then it is very unlikely to get all 7's but it is more likely to get two matching symbols
 while the player still wins money.
 
 Magic 8 Ball
 
-In this programs the user inputs a question and using the random choice function then  output of several answers stored in a list that range from yes to no ones will be chosen at random
+In this program the user inputs a question and using the random choice function then output of several answers stored in a list that range from yes to no ones will be chosen at random
 and will respond to the user's question.
 
-- This program is unique because there is a variety if response available and this program evaluates if the input is a question because if it is not there the statesmen will not
+- This program is unique because there is a variety of responses available and this program evaluates if the input is a question because if it is not there the statesmen will not
 be evaluated. The user would have to re enter the statement as a question.
 
 Tetris
 
-This program analyzes the top 100 scores in the history of tetris and there are several functions built into this program to analyze these 100 scores. This program can determines what is the biggest
+This program analyzes the top 100 scores in the history of tetris and there are several functions built into this program to analyze these 100 scores. This program can determine what is the biggest
 score and what is the smallest score, aside from this if the user scores a high score they can check if it beats the top scores and if it does it will be appended into the list.
 - Hey features are that it sorts through a list and is able to identify the biggest and smallest number
 - Another one would be the ability to append new high scores and remove the previous names so that it is only top 100 scores.
@@ -89,13 +89,13 @@ of the city which is meant to help the user decide which city they want to go to
 
 Pokemon
 
-This program trains Eevee which is a pokemon character and every day as it gets older and is training more it evolves into an older version of the pokemon. The pokemon can also do a battle and if they win they
+This program trains Eevee which is a pokemon character and every day as it gets older and is training more it evolves into an older version of the pokemon. The pokemon can also do battles and if they win they
 can go up a couple more levels which hepes the pokemon evolve quicker.
 - Key Features are that the pokemon can grow and evolve in different ways and each time we check what there will be a picture displayed of the appearance of the pokemon.
 
 US States
 
-This program uses the 50 states as data to be used in different functions to identify different aspects of a states. Those aspects are a state's capital,a capital's quiz , the year it was founded and a state's nickname.
+This program uses the 50 states as data to be used in different functions to identify different aspects of a state. Those aspects are a state's capital,a capital's quiz , the year it was founded and a state's nickname.
 There are several lists that each are used to help those functions function correctly;try according to what state a user has chosen.
 - Something unique about this program is that the capitals quiz has three levels of difficulty and the user can choose which level they want. Helps improve the user’s capacity to know state capitals.
 
