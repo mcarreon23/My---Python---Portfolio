@@ -50,6 +50,7 @@ till eventually a name will be revealed that will be chosen based on the selecti
 - The Name Generator project is unique due to the player's ability to choose several options before the final name is revealed.
 
 Dog Breeds
+
 This program offers several different functions that each intend to output based on the user input. These individual functions sort through one main list and whatever 
 dog breed that matches the specifics entered will be sent to a filtered list and at the end based on what function you are using is what will be displayed. This program is very
 customizable and is meant to accommodate several different users.
@@ -58,6 +59,7 @@ customizable and is meant to accommodate several different users.
 - Variety of different data that matches each dog breed
 
 Slot Machine
+
 This program is designed to gamble and there are different odds that bring up the value a person can win depending on what they got is how much money they can win. There are
 different odds of getting matching symbols especially getting all 7's and winning the jackpot.
 
@@ -65,12 +67,19 @@ different odds of getting matching symbols especially getting all 7's and winnin
 while the player still wins money.
 
 Magic 8 Ball
+
 In this programs the user inputs a question and using the random choice function then  output of several answers stored in a list that range from yes to no ones will be chosen at random
 and will respond to the user's question.
 
 - This program is unique because there is a variety if response available and this program evaluates if the input is a question because if it is not there the statesmen will not
 be evaluated. The user would have to re enter the statement as a question.
 
+Tetris
+
+This program analyzes the top 100 scores in the history of tetris and there are several functions built into this program to analyze these 100 scores. This program can determines what is the biggest
+score and what is the smallest score, aside from this if the user scores a high score they can check if it beats the top scores and if it does it will be appended into the list.
+- Hey features are that it sorts through a list and is able to identify the biggest and smallest number
+- Another one would be the ability to append new high scores and remove the previous names so that it is only top 100 scores.
 
 
 
