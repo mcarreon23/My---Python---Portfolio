@@ -81,5 +81,23 @@ score and what is the smallest score, aside from this if the user scores a high 
 - Hey features are that it sorts through a list and is able to identify the biggest and smallest number
 - Another one would be the ability to append new high scores and remove the previous names so that it is only top 100 scores.
 
+Image Recommendor
+
+This program has 5 U.S cities which are Chicago, New York, Los Angeles , Seattle , and Colorado Springs. At random this program will select one of these 5 cities and give a brief description
+of the city which is meant to help the user decide which city they want to go to.
+- Something unique is that along with the brief description there will also be a picture added to show the city that got chosen. The chosen city is also chosen at random.
+
+Pokemon
+
+This program trains Eevee which is a pokemon character and every day as it gets older and is training more it evolves into an older version of the pokemon. The pokemon can also do a battle and if they win they
+can go up a couple more levels which hepes the pokemon evolve quicker.
+- Key Features are that the pokemon can grow and evolve in different ways and each time we check what there will be a picture displayed of the appearance of the pokemon.
+
+US States
+
+This program uses the 50 states as data to be used in different functions to identify different aspects of a states. Those aspects are a state's capital,a capital's quiz , the year it was founded and a state's nickname.
+There are several lists that each are used to help those functions function correctly;try according to what state a user has chosen.
+- Something unique about this program is that the capitals quiz has three levels of difficulty and the user can choose which level they want. Helps improve the user’s capacity to know state capitals.
+
 
 
