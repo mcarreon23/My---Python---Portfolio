@@ -1,1 +1,33 @@
+#Magic 8 Ball
+#Init
+import random
+import time
+magic_list = ["Yes","Most Likely","Of Course","The stars have aligned","No", "Don't even waste your time","Doubtful","The stars did not align","Maybe","Rethink your question","There is a possibility","Concentrate more and ask again","Unclear result please repeat your question","Positive","Nope","Count on it!"] #Magic 8 Ball Responses
+
+
+#Functions
+print("Welcome to Magic 8 Ball Game!" )
+print("Ask a question and get a reponse from the magic ball!")
+def magic_ball():
+    while True:     #loops the game
+        question=input("Enter a question.")
+        x = question.endswith("?")      #checks if the input ends with a question mark.
+        if not x :
+            print("ERROR:Please enter a question")
+            continue
+        else:
+            for i in range(3):
+                print("Shaking... ")
+                time.sleep(2)
+            print(random.choice(magic_list))        #chooses a random response
+            question = input("Do you want to play again? Yes(y) or No(n)")
+            if question == "y":
+                magic_ball()
+            elif question == "n":
+                print("Thank You for playing!")
+                break
+
+
+#Main
+magic_ball()
 
