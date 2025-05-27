@@ -1,0 +1,206 @@
+#CREATE TASK
+#U.S States
+#Initialization
+import random
+code = ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA",
+        "KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM",
+        "NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA",
+        "WV","WI","WY"]
+names = ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
+         "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa",
+         "Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts",
+         "Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
+         "New Hampshire","New Jersey","New Mexico","New York","North Carolina",
+         "North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island",
+         "South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont",
+         "Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
+nicknames = ["Yellowhammer State","The Last Frontier","The Grand Canyon State",
+             "The Natural State","Golden State","The Centennial State",
+             "Constitution State","The First State / The Diamond State",
+             "Sunshine State","Peach State","Aloha State","Gem State","Prairie State",
+             "Hoosier State","Hawkeye State","Sunflower State","Bluegrass State",
+             "Pelican State","Pine Tree State","Old Line State","Bay State",
+             "Wolverine State / Great Lakes State","North Star State / Land of 10000 Lakes",
+             "Magnolia State","Show Me State","Treasure State","Cornhusker State",
+             "The Silver State","Granite State","Garden State","Land of Enchantment",
+             "Empire State","Old North State / Tar Heel State",
+             "Peace Garden State / Flickertail State / Roughrider State",
+             "Buckeye State","Sooner State","Beaver State","Keystone State","The Ocean State",
+             "Palmetto State","Mount Rushmore State","Volunteer State","Lone Star State",
+             "The Beehive State","Green Mountain State","Old Dominion State","The Evergreen State",
+             "Mountain State","Badger State","Equality State"]
+capitals = ["Montgomery","Juneau","Phoenix","Little Rock","Sacramento","Denver","Hartford",
+            "Dover","Tallahassee","Atlanta","Honolulu","Boise","Springfield","Indianapolis",
+            "Des Moines","Topeka","Frankfort","Baton Rouge","Augusta","Annapolis","Boston",
+            "Lansing","Saint Paul","Jackson","Jefferson City","Helena","Lincoln","Carson City",
+            "Concord","Trenton","Santa Fe","Albany","Raleigh","Bismarck","Columbus",
+            "Oklahoma City","Salem","Harrisburg","Providence","Columbia","Pierre","Nashville",
+            "Austin","Salt Lake City","Montpelier","Richmond","Olympia","Charleston","Madison",
+            "Cheyenne"]
+admission_year =["1819","1959","1912","1836","1850","1876","1788","1787","1845",
+                 "1788","1959","1890","1818","1816","1846","1861","1792","1812","1820",
+                 "1788","1788","1837","1858","1817","1821","1889","1867","1864","1788",
+                 "1787","1912","1788","1789","1889","1803","1907","1859","1787","1790",
+                 "1788","1889","1796","1845","1896","1791","1788","1889","1863","1848","1890"]
+
+
+#Functions
+def states_nicknames(): 
+#This function searches for nicknames for a chosen state.
+    print ("You have selected to learn about the nickname of chosen state.")
+    state = input("""For what state would you like to know it's nickname? 
+Please enter full names or the abbreviation of the state.""")
+#inputs and list are in lowercase so that this function is not case-sensitive
+    state_lower = state.lower()     
+    names_lower = [item.lower() for item in names] 
+#lower case items on a list:
+#https://www.geeksforgeeks.org/python-convert-case-of-elements-in-a-list-of-strings/
+    code_lower = [item.lower() for item in code]   
+#lower case items on a list:
+#https://www.geeksforgeeks.org/python-convert-case-of-elements-in-a-list-of-strings/ 
+    for i in range(len(names)):
+        if state_lower == names_lower[i] or state_lower == code_lower[i]:
+#searches the lowercase names list and the lowercase code list
+            print(nicknames[i])
+            return     
+    print("Please check grammar and spelling and try again!")
+
+
+def state_capital():
+    print ("You have selected to get the name of the capital of you chosen state.")
+    question = input("""What state are you looking to find the capital of? 
+Please enter the name of abbreviation.""")
+    question_lower = question.lower()   
+#inputs and list are in lowercase so that this function is not case-sensitive
+    names_lower = [item.lower() for item in names] 
+#lower case items on a list:
+#https://www.geeksforgeeks.org/python-convert-case-of-elements-in-a-list-of-strings/
+    code_lower = [item.lower() for item in code] 
+#lower case items on a list:
+#https://www.geeksforgeeks.org/python-convert-case-of-elements-in-a-list-of-strings/
+    for i in range(len(capitals)):
+        if question_lower == names_lower[i] or question_lower == code_lower[i]:       
+#previous line code is to check both the lowercase state list and lowercase code list
+            return (capitals[i])       
+    return ("Please check grammar and spelling and try again!")
+
+
+def founded():  #this function returns the year that an inputted state admissioned in the U.S
+    print("You have selected the option to get the year of admission of your chosen state.")
+    question = input("""Enter the state you want to know the admission year of
+ (please enter full name or abbreviation):""")
+    question_lower = question.lower()  
+#inputs and list are in lowercase so that this function is not case-sensitive
+    names_lower = [item.lower() for item in names] 
+#lower case items on a list:
+#https://www.geeksforgeeks.org/python-convert-case-of-elements-in-a-list-of-strings/
+    code_lower = [item.lower() for item in code]
+#lower case items on a list:
+#https://www.geeksforgeeks.org/python-convert-case-of-elements-in-a-list-of-strings/
+    for i in range (len(names)):
+        if question_lower == names_lower[i] or question_lower == code_lower[i]:   
+#previous line code is to check both the lowercase state list and lowercase code list
+            return (admission_year[i])
+    else:
+        return "Please check grammar and spelling and try again!"
+
+
+def quiz(level):   
+#this programs creates a quiz based on the user's chosen level
+    print("You have chosen to take a quiz about the state capitals.")
+    correct = 0
+    if level == "easy" or level == "e" :
+        print("This is a 5 question capital quiz!")
+        for i in range(5):
+            random_state = random.choice(names)
+            solution = names.index(random_state)
+# algorithm above was used and modifed to fit the programs-->
+# algorith is from: https://www.w3schools.com/python/ref_list_index.asp
+
+
+            correct_capital = capitals[solution]
+            answer = input("What is the capital of " + random_state +": ")
+            print("\n")
+            if answer.lower() == correct_capital.lower():
+                print("Correct!")
+                correct = correct + 1
+            else:
+                print("wrong")
+        print("You got "+ str(correct) + "/5 correct")
+    elif level == "m" or level == "medium":
+        print("This is a 8 question capital quiz!")
+        for i in range(8):
+            random_state = random.choice(names)
+            solution = names.index(random_state)
+# algorithm above was used and modifed to fit the programs-->
+# algorith is from: https://www.w3schools.com/python/ref_list_index.asp
+            correct_capital = capitals[solution]
+            answer = input("What is the capital of " + random_state +": ")
+            print("\n")
+            if answer.lower() == correct_capital.lower():
+                print("Correct!")
+                correct = correct + 1
+            else:
+                print("wrong")
+        print("You got "+ str(correct) + "/8 correct")
+    elif level == "h" or level == "hard":
+        print("This is a 12 question capital quiz!")
+        for i in range(12):
+            random_state = random.choice(names)
+            solution = names.index(random_state)
+# algorithm above was used and modifed to fit the programs-->
+# algorith is from: https://www.w3schools.com/python/ref_list_index.asp
+            correct_capital = capitals[solution]
+            answer = input("What is the capital of " + random_state +": ")
+            print("\n")
+            if answer.lower() == correct_capital.lower():
+                print("Correct!")
+                correct = correct + 1
+            else:
+                print("wrong")
+        print("You got "+ str(correct) + "/12 correct")
+    else:
+        print("There has been an error please try again!")
+
+
+def US_states():        
+#This function creates the menu that has the previous functions
+    print("\n")
+    print("""           Welcome to the U.S States game!""")
+    print("\n")
+    while True:
+        print("\n")
+        print("""These are the options for this game:
+            1.Find out the nickname of your chosen state 
+            2.Find out the capital of a chosen state
+            3.Find out the admission year of a chosen state
+            4.Take a capitals quiz
+            5.Exit""")
+        print("\n")
+        option = int(input("Choose the number (1-5) that is assigned to the option you want: "))
+        if option == 1:
+            print("\n")
+            states_nicknames()
+        elif option == 2:
+            print("\n")
+            print(state_capital())
+        elif option == 3 :
+            print("\n")
+            print(founded())
+        elif option == 4 :
+            print("\n")
+            quiz(input("Choose a level: easy(e), medium(m), or hard(h)"))
+        else:
+            print("Thank You for playing the U.S States Game! Have a great day!")
+            print("\n")
+            break
+
+
+#main
+US_states()
+
+
+#Source
+#US States Data was used from Code.org https://studio.code.org/data_docs/states/ 
+#and is under a Creative Commons License (CC BY-NC-SA 4.0)
+#Full Data Set link:https://tinyurl.com/mr34rv3t
