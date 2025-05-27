@@ -1,0 +1,83 @@
+#Image Recommend
+#2/24/25
+#Init
+import random
+import time
+from PIL import Image
+import requests
+from io import BytesIO
+cities= ["https://tinyurl.com/42tnpj86",#chicago
+         "https://tinyurl.com/bdf8zx7c", #NYC
+         "https://tinyurl.com/2s42mcxc", #seattle
+         "https://tinyurl.com/4jx5zynt", #LA
+         "https://tinyurl.com/54dy4zkb" ]#Colorado Springs
+
+
+
+#Define a function called open_image with a url parameter for the image address
+def open_image(url):
+    response = requests.get(url)
+    img = Image.open(BytesIO(response.content))
+    img.show()
+
+
+def cityrec():
+        print("Welcome to City Recommender")
+        while True:             #loops for several games
+                question=input("Would you like a recommendation of a city? If Yes enter (y) if No enter (n)  ")         #starts the game
+                if question == "y":
+                        randomCity = random.randint(0,4)                #selects a random number whcih aligns with a specific image
+                        for i in range(3):              #adds a countdown to the code
+                                print("Loading... ")
+                                time.sleep(1)
+                        if randomCity == 0 :
+                                open_image(cities[0])           #opens image in index 0
+                                print("""I recommend Chicago “The Windy City” due to its high tourism and lovely
+attractions. Chicago is home to a lot of signature foods and restaurants like El Ricobene's and
+the Chicago Style pizza. There are a lot of other attractions like Willis Tower which has a skydeck
+for the public. As well as The Navy Pier and a lot of museums and great architecture.Chicago suits a lot
+of different types of people like adventurous, historians, foodies and more!""")
+                        elif randomCity == 1:
+                                open_image(cities[1])                   #opens image in index 1
+                                print("""I recommend New York City also known as The Big Apple because of its diversity and significant
+landmarks. In New York City they are known for the Statue of Liberty as well as their Pizzas.
+Aside from that they have cultural diversity from Irish,German, and Itialians. There are a lot of
+activities like Times Square, Brooklyn Bridge, and Ferry rides.""")
+                        elif randomCity == 2:
+                                open_image(cities[2])           #opens image in index 2
+                                print("""I recommend Seattle also known as The Emerald City because of nature and coffee. Seattle is the birthplace of
+Startbucks so it is home to some of the best coffee. Aside from this there are iconic attractions one of them
+being The Space Needle and due to its location it is open to nature and there are a lot of National Parks and
+bodies of water.""")
+                        elif randomCity == 3:
+                                open_image(cities[3])           #opens image in index 3
+                                print("""I recommend Los Angeles “City of the Angels” because of all the diversity, attractions, and weather.
+There are a lot of attractions including the Griffith Observatory, hiking trails, museums,shopping centers, DisneyLand,
+and Walk of Fame. Los Angeles is fit for both the adventurous,historians, and easygoing people.""")
+
+                        elif randomCity == 4:
+                                open_image(cities[4])           #opens image in index 4
+                                print("""I recommend going to the Colorado Spring because of its access to nature, all the architecture in the rocks, and the weather.
+In Colorado Spring you will have access to the mountains and snow in which you can go snowboarding
+and sledding. Aside from this there are a lot of mountains which are all unique architecture and there are
+National Forests with waterfalls. If you are interested in adventures and architecture, Colorado Springs is the right place for you!""")
+
+                else:
+                        print("Thank you for using city recommender. Have a great day!")
+                        break
+
+
+#main
+cityrec()
+
+#Sources
+#The Chicago (Illinois) Bean: Image Source: Kepnes, Matthew. “The 12 Best Things to Do in Chicago (Updated 2025).” Nomadic Matt, 25 December 2024,
+#https://www.nomadicmatt.com/travel-blogs/best-things-to-do-chicago/. Accessed 24 February 2025.
+#The New York City,NY statue of liberty.Image Source:Northstar. “New York, New York.” Travel Weekly, Travel Weekly,
+#https://www.travelweekly.com/Hotels/New-York-NY/The-Cloud-One-Hotel-New-York-Downtown-p58563334,Nearby-Hotels?v=D. Accessed 24 February 2025.
+#The Seattle, Washington Space Needle.Image Source: Visit Seattle Washington | Travel & Tourism | Official Site, https://visitseattle.org/. Accessed 24 February 2025.
+#The Los Angeles Griffith Observatory.Image Source:Andrews, Avital. “Los Angeles City Guide: Explore L.A. on Foot | Via.” AAA Northern California, 1 November 2018,
+# https://mwg.aaa.com/via/places-visit/things-to-do-los-angeles. Accessed 24 February 2025.
+#The Colorado Spring Garden of the Gods.Image Source:Law, Lana, and Meagan Drillinger. “16 Top-Rated Tourist Attractions in Colorado Springs, CO.” PlanetWare,
+#https://www.planetware.com/tourist-attractions-/colorado-springs-us-co-c.htm. Accessed 24 February 2025.
+
