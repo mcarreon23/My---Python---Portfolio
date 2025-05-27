@@ -1,0 +1,52 @@
+#Slot Machine
+#1/28/25
+
+
+#init
+import random
+import time
+slot_symbols = ["♠","♡", "♢", "♣", "7","♠","♡", "♢", "♣"]
+credits = 100
+
+#elif are all the different outcomes that could happen in order to win or match or 2 of a kind and if none of those happen they lose.
+print("Welcome to the Slot Machine!")
+print("If you would like to play just press (s) for spin or (q) to quit.")
+def slot_machine():
+    while True:
+        global credits
+        start = input("Choose to spin (s) or to quit (q)")
+        if start == "s" and credits > 5:        #if the player chooses "s" and had more than 5 credits
+            for i in range(3):
+                print("Shaking... ")
+                time.sleep(1)
+            choice_1 = random.choice(slot_symbols)
+            choice_2 = random.choice(slot_symbols)
+            choice_3 = random.choice(slot_symbols)
+            print(random.choice(choice_1))
+            print(random.choice(choice_2))
+            print(random.choice(choice_3))
+            if choice_1 == choice_2 == choice_3 == "7":
+                print("You have won the Jackpot!")
+                credits = credits * 50
+                print("You have: " + str(credits)+ " credits")
+            elif choice_1 == choice_2 == choice_3 == "♣" or choice_1 == choice_2 == choice_3 == "♠" or choice_1 == choice_2 == choice_3 == "♡" or  choice_1 == choice_2 == choice_3 == "♢":
+                print("You have won by getting three matching symbols!")
+                credits = credits * 10
+                print("You have: " + str(credits)+ " credits")
+            elif choice_1 == choice_2 == "♣" or choice_1 == choice_3 == "♣" or choice_2 == choice_3 == "♣" or choice_1 == choice_2 == "♢" or choice_1 == choice_3 == "♢" or choice_2 == choice_3 == "♢" or choice_1 == choice_2 == "♡" or choice_1 == choice_3 == "♡" or choice_2 == choice_3 == "♡" or choice_1 == choice_2 == "♠" or choice_1 == choice_3 == "♠" or choice_2 == choice_3 == "♠"or choice_1 == choice_2 == "7" or choice_1 == choice_3 == "7" or choice_2 == choice_3 == "7":
+                print("You have matched two symbols and still win!")
+                credits = credits * 5
+                credits = credits + 5       # adds the credits for one free spin
+                print("You won a free spin which is 5 credits and they will be added to you credits.")
+                print("You have: " + str(credits)+ " credits")
+            else:
+                print("You lost.")
+                credits = credits - 5       # if the player loses then they lose 5 credits      1 play = 5 credits
+                print("You have: " + str(credits)+ " credits")
+        elif start == "q" or credits < 5:       # if player decides to quit or don't have enough credits they will not play anymore
+            print("If you did not choose to quit then you do not have enough credits. If you still want to play enter more credits otherwise -- ")
+            print("Thank You for playing the Slot Machine!")
+            break
+
+#main
+slot_machine()
