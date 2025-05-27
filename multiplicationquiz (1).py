@@ -1,6 +1,4 @@
-#Marianne Carreon
-#Multiplication Quiz
-#1/8/24
+
 #Init
 import random
 
