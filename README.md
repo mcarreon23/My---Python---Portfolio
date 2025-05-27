@@ -49,3 +49,28 @@ till eventually a name will be revealed that will be chosen based on the selecti
 
 - The Name Generator project is unique due to the player's ability to choose several options before the final name is revealed.
 
+Dog Breeds
+This program offers several different functions that each intend to output based on the user input. These individual functions sort through one main list and whatever 
+dog breed that matches the specifics entered will be sent to a filtered list and at the end based on what function you are using is what will be displayed. This program is very
+customizable and is meant to accommodate several different users.
+
+- Some key features are that this program filters through data based on the users input
+- Variety of different data that matches each dog breed
+
+Slot Machine
+This program is designed to gamble and there are different odds that bring up the value a person can win depending on what they got is how much money they can win. There are
+different odds of getting matching symbols especially getting all 7's and winning the jackpot.
+
+- This program is unique because since I used random choices then it is very unlikely to get all 7's but it is more likely to get two matching symbols
+while the player still wins money.
+
+Magic 8 Ball
+In this programs the user inputs a question and using the random choice function then  output of several answers stored in a list that range from yes to no ones will be chosen at random
+and will respond to the user's question.
+
+- This program is unique because there is a variety if response available and this program evaluates if the input is a question because if it is not there the statesmen will not
+be evaluated. The user would have to re enter the statement as a question.
+
+
+
+
